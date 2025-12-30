@@ -5,6 +5,11 @@ class PaymentHistoryScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(appBar: AppBar(title: Text("Payment History")));
+    return Scaffold(
+      appBar: AppBar(title: Text("Payment History")),
+      body: Container(
+        decoration: BoxDecoration(borderRadius: BorderRadius.circular(20)),
+      ),
+    );
   }
 }
