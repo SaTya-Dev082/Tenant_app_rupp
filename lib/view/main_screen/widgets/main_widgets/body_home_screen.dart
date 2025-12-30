@@ -3,10 +3,10 @@ import 'package:get/get.dart';
 import 'package:get_storage/get_storage.dart';
 
 import '../../../../controller/home_controller.dart';
-import '../sub_widgets/maintenance_request.dart';
-import '../sub_widgets/make_payment.dart';
-import '../sub_widgets/my_lease.dart';
-import '../sub_widgets/payment_history.dart';
+import '../sub_widgets/sub_home_screen/maintenance_request.dart';
+import '../sub_widgets/sub_home_screen/make_payment.dart';
+import '../sub_widgets/sub_home_screen/my_lease.dart';
+import '../sub_widgets/sub_home_screen/payment_history.dart';
 
 final controller = Get.find<HomeController>();
 final box = GetStorage();

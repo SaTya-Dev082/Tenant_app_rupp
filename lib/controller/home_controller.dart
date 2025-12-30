@@ -13,7 +13,7 @@ class HomeController extends GetxController {
 
   // Block Theme Mode
   bool isDarkMode = false;
-  void changeThemeMode() {
+  void setThemeMode(bool value) {
     var theme = Get.isDarkMode;
     if (theme) {
       Get.changeThemeMode(ThemeMode.light);
@@ -27,15 +27,30 @@ class HomeController extends GetxController {
     update();
   }
 
-  IconButton changeIconTheme() {
+  IconButton changeIconTheme(bool value) {
     String? theme = box.read("theme");
     return IconButton(
       onPressed: () {
-        changeThemeMode();
+        setThemeMode(value);
       },
       icon: Icon(
         theme == "dark" ? Icons.dark_mode_outlined : Icons.light_mode_outlined,
       ),
     );
+  }
+
+  // Switch block
+  bool isMotoParking = false;
+  void changeParking(bool value) {
+    isMotoParking = value;
+    box.write("parking", value);
+    update();
+  }
+
+  @override
+  void onInit() {
+    super.onInit();
+    isMotoParking = box.read("parking") ?? false;
+    isDarkMode = box.read("theme") == "dark";
   }
 }
