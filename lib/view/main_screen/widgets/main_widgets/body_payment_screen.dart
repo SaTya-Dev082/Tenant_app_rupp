@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:get_storage/get_storage.dart';
 import 'package:tenant_app/controller/home_controller.dart';
+import 'package:tenant_app/view/main_screen/widgets/sub_widgets/sub_payment_screen/payment_success_screen.dart';
 
 final box = GetStorage();
 final controller = Get.find<HomeController>();
@@ -128,7 +129,9 @@ class buildBodyPaymentScreen extends StatelessWidget {
                         shape: RoundedRectangleBorder(
                           borderRadius: BorderRadius.circular(20),
                         ),
-                        onPressed: () {},
+                        onPressed: () {
+                          Get.to(PaymentSuccessScreen());
+                        },
                         textColor: Colors.white,
                         color: Colors.orange,
                         child: Text(
