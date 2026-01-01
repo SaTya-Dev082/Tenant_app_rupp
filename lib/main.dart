@@ -1,12 +1,14 @@
 import 'package:flutter/material.dart';
 import 'package:get_storage/get_storage.dart';
 import 'package:get/get.dart';
+import 'package:tenant_app/controller/home_controller.dart';
 import 'binding/home_binding.dart';
 import 'constants/constant.dart';
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
   await GetStorage.init();
+  Get.put(HomeController());
   runApp(TenantApp());
 }
 

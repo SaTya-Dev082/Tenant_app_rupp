@@ -7,7 +7,7 @@ import '../sub_widgets/sub_profile_screen/theme_mode_view.dart';
 
 class BodyProfileScreen extends StatelessWidget {
   BodyProfileScreen({super.key});
-  final controller = Get.find<HomeController>();
+  final HomeController controller = Get.find();
 
   @override
   Widget build(BuildContext context) {

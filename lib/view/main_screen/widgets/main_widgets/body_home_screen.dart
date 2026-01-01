@@ -8,7 +8,7 @@ import '../sub_widgets/sub_home_screen/make_payment.dart';
 import '../sub_widgets/sub_home_screen/my_lease.dart';
 import '../sub_widgets/sub_home_screen/payment_history.dart';
 
-final controller = Get.find<HomeController>();
+final HomeController controller = Get.find();
 final box = GetStorage();
 
 // Body Home Screen Widget
@@ -40,7 +40,7 @@ Widget buildBodyHomeScreen() {
                   onPressed: () {},
                   child: Text(
                     "Welcome, User",
-                    style: TextStyle(fontSize: 21, color: color),
+                    style: TextStyle(fontSize: 20, color: color),
                   ),
                 ),
                 IconButton(

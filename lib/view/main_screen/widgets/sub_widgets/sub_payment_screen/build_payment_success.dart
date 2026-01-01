@@ -1,10 +1,12 @@
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:get_storage/get_storage.dart';
 import 'package:get/get.dart';
-import 'package:tenant_app/view/main_screen/screens/home_screen.dart';
 import 'package:tenant_app/view/main_screen/screens/main_screen.dart';
+import 'package:tenant_app/view/main_screen/screens/profile_screen.dart';
+import 'package:tenant_app/view/main_screen/widgets/main_widgets/body_home_screen.dart';
 import 'package:tenant_app/view/main_screen/widgets/sub_widgets/sub_home_screen/payment_history.dart';
+
+import '../../main_widgets/body_profile_screen.dart';
 
 final box = GetStorage();
 Widget buildPaymentSuccess() {
@@ -50,7 +52,7 @@ Widget buildPaymentSuccess() {
                   Text(
                     "Payment Details",
                     style: TextStyle(
-                      fontSize: 19,
+                      fontSize: 18,
                       color: color,
                       fontWeight: FontWeight.bold,
                     ),
@@ -65,13 +67,17 @@ Widget buildPaymentSuccess() {
         ),
         buildButton(
           title: "Back To Home",
+          color: Colors.orange,
           onTap: () {
-            Get.to(MainScreen());
+            controller.changeBottomIndex(index: 0);
+            Get.offAll(MainScreen());
           },
         ),
         buildButton(
           title: "View Payment History",
+          color: Colors.blueGrey,
           onTap: () {
+            controller.changeBottomIndex(index: 3);
             Get.to(PaymentHistoryScreen());
           },
         ),
@@ -80,7 +86,11 @@ Widget buildPaymentSuccess() {
   );
 }
 
-Widget buildButton({required String title, required Function() onTap}) {
+Widget buildButton({
+  required String title,
+  required Color color,
+  required Function() onTap,
+}) {
   return SizedBox(
     height: Get.height * 0.05,
     width: double.infinity,
@@ -88,7 +98,7 @@ Widget buildButton({required String title, required Function() onTap}) {
       shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(20)),
       onPressed: onTap,
       textColor: Colors.white,
-      color: Colors.orange,
+      color: color,
       child: Text(
         title,
         style: TextStyle(fontSize: 21, fontWeight: FontWeight.bold),
@@ -105,7 +115,7 @@ Widget _buildRow({required String title, required double price}) {
       Text(
         title,
         style: TextStyle(
-          fontSize: 16,
+          fontSize: 15,
           fontWeight: FontWeight.bold,
           color: color,
         ),
@@ -113,7 +123,7 @@ Widget _buildRow({required String title, required double price}) {
       Text(
         "\$${price.toStringAsFixed(2)}",
         style: TextStyle(
-          fontSize: 16,
+          fontSize: 15,
           fontWeight: FontWeight.bold,
           color: color,
         ),
@@ -130,7 +140,7 @@ Widget _buildType({required String title, required String type}) {
       Text(
         title,
         style: TextStyle(
-          fontSize: 16,
+          fontSize: 15,
           fontWeight: FontWeight.bold,
           color: color,
         ),
@@ -138,7 +148,7 @@ Widget _buildType({required String title, required String type}) {
       Text(
         type,
         style: TextStyle(
-          fontSize: 16,
+          fontSize: 15,
           fontWeight: FontWeight.bold,
           color: color,
         ),

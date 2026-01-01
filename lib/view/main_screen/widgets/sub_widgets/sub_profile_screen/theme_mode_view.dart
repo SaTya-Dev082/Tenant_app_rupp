@@ -5,7 +5,7 @@ import 'package:tenant_app/controller/home_controller.dart';
 
 class ThemeModeView extends StatelessWidget {
   ThemeModeView({super.key});
-  final controller = Get.find<HomeController>();
+  final HomeController controller = Get.find();
   final box = GetStorage();
 
   @override

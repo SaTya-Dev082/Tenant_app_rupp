@@ -8,7 +8,7 @@ import 'package:tenant_app/view/main_screen/screens/profile_screen.dart';
 
 class MainScreen extends StatelessWidget {
   MainScreen({super.key});
-  final controller = Get.find<HomeController>();
+  final HomeController controller = Get.find();
   final pageController = PageController();
 
   @override
