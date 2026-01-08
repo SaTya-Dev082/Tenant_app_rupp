@@ -4,6 +4,8 @@ import 'package:get_storage/get_storage.dart';
 import 'package:tenant_app/controller/home_controller.dart';
 import 'package:tenant_app/view/main_screen/widgets/sub_widgets/sub_payment_screen/payment_success_screen.dart';
 
+import '../sub_widgets/sub_payment_screen/build_payment_method_widget.dart';
+
 final box = GetStorage();
 final HomeController controller = Get.find();
 
@@ -141,7 +143,9 @@ class buildBodyPaymentScreen extends StatelessWidget {
                   ),
                 ),
                 InkWell(
-                  onTap: () {},
+                  onTap: () {
+                    Get.to(buildPaymentMethod());
+                  },
                   child: Card(
                     child: Padding(
                       padding: const EdgeInsets.all(8.0),

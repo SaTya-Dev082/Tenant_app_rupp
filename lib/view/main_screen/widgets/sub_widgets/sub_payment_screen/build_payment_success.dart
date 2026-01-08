@@ -2,11 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:get_storage/get_storage.dart';
 import 'package:get/get.dart';
 import 'package:tenant_app/view/main_screen/screens/main_screen.dart';
-import 'package:tenant_app/view/main_screen/screens/profile_screen.dart';
 import 'package:tenant_app/view/main_screen/widgets/main_widgets/body_home_screen.dart';
 import 'package:tenant_app/view/main_screen/widgets/sub_widgets/sub_home_screen/payment_history.dart';
-
-import '../../main_widgets/body_profile_screen.dart';
 
 final box = GetStorage();
 Widget buildPaymentSuccess() {
