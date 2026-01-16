@@ -6,6 +6,7 @@ import 'package:tenant_app/view/main_screen/widgets/main_widgets/body_home_scree
 import 'package:tenant_app/view/main_screen/widgets/sub_widgets/sub_home_screen/payment_history.dart';
 
 final box = GetStorage();
+final controller = Get.find();
 Widget buildPaymentSuccess() {
   var color = box.read("theme") == "dark" ? Colors.white : Colors.black;
   var bgColor =

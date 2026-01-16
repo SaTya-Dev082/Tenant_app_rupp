@@ -29,9 +29,3 @@ class TenantApp extends StatelessWidget {
     );
   }
 }
-
-
-/// Test push to github
-void test() {
-  print("This is a test function.");
-}

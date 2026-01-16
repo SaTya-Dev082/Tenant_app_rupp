@@ -13,7 +13,7 @@ Widget buildOverlayWidget() {
       children: [
         SizedBox(
           width: double.infinity,
-          height: Get.height * 0.35,
+          height: Get.height * 0.365,
           child: Padding(
             padding: const EdgeInsets.symmetric(horizontal: 15, vertical: 5),
             child: Card(
@@ -21,6 +21,7 @@ Widget buildOverlayWidget() {
               child: Column(
                 spacing: 10,
                 children: [
+                  SizedBox(height: 10),
                   Container(
                     width: 75,
                     height: 75,
