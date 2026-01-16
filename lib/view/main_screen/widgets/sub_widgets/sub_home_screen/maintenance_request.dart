@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:tenant_app/view/main_screen/widgets/main_widgets/body_maintenance_screen.dart';
 
 import '../sub_maintenance_screen/overlay_widget.dart';
 
@@ -7,9 +8,6 @@ class MaintenanceRequestScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: AppBar(title: Text("Maintenance Request")),
-      body: buildOverlayWidget(),
-    );
+    return Scaffold(body: bodyMaintenanceScreen());
   }
 }
